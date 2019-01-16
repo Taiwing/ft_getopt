@@ -6,7 +6,7 @@
 /*   By: yforeau <yforeau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/10 22:23:19 by yforeau           #+#    #+#             */
-/*   Updated: 2019/01/11 12:24:05 by yforeau          ###   ########.fr       */
+/*   Updated: 2019/01/16 15:47:59 by yforeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ static void		add_ambig(t_optdata *d, t_opt *found,
 	}
 }
 
-/*TODO: normify*/
 static t_opt	*find_abbrev(char **argv, t_optdata *d,
 							char *prefix, int namelen)
 {
@@ -43,6 +42,7 @@ static t_opt	*find_abbrev(char **argv, t_optdata *d,
 	t_opt			*found;
 	unsigned char	*ambig_set;
 	int				ambig_fallback;
+	int				match;
 
 	found = 0;
 	p = d->longopts;
@@ -50,14 +50,12 @@ static t_opt	*find_abbrev(char **argv, t_optdata *d,
 	ambig_fallback = 0;
 	while (p->name)
 	{
-		if (!ft_strncmp(p->name, d->nextchar, namelen))
-		{
-			if (!found)
-				found = p;
-			else if (d->longonly || found->has_arg != p->has_arg
-					|| found->flag != p->flag || found->val != p->val)
-				add_ambig(d, p, &ambig_set, &ambig_fallback);
-		}
+		match = !ft_strncmp(p->name, d->nextchar, namelen);
+		if (match && !found)
+			found = p;
+		else if (match && (d->longonly || found->has_arg != p->has_arg
+				|| found->flag != p->flag || found->val != p->val))
+			add_ambig(d, p, &ambig_set, &ambig_fallback);
 		++p;
 	}
 	if (ambig_set)
