@@ -1,0 +1,11 @@
+# ft_getopt
+
+Implementation of getopt in C. Handle arguments for unix programs. Is a weird
+mix of the GNU and macos implementation. It handles everything pretty much like
+the GNU version, except errors where it is close to the mac version. Except
+that it lists possibilities when confronted with ambiguous long options. It
+also handles the '-' and '+' flags in optstring like the GNU version.
+
+One of the differences with the standard getopt implementation is that it is
+reentrant and thread-safe by default, the only drawback being that it needs an
+init function.
