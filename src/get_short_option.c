@@ -6,12 +6,12 @@
 /*   By: yforeau <yforeau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/10 19:37:35 by yforeau           #+#    #+#             */
-/*   Updated: 2019/01/11 08:33:10 by yforeau          ###   ########.fr       */
+/*   Updated: 2019/01/17 10:54:12 by yforeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_getopt.h"
-#include "getopt_utils.h"
+#include "libft.h"
 #include "getopt_errors.h"
 
 /*if current option requires an argument, this function gets it*/

@@ -6,13 +6,13 @@
 /*   By: yforeau <yforeau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/10 17:58:46 by yforeau           #+#    #+#             */
-/*   Updated: 2019/01/15 14:30:23 by yforeau          ###   ########.fr       */
+/*   Updated: 2019/01/17 10:53:54 by yforeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "permute_order.h"
 #include "process_long_option.h"
-#include "getopt_utils.h"
+#include "libft.h"
 
 static void	handle_stop_string(int argc, char **argv, t_optdata *d)
 {

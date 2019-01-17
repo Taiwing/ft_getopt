@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   getopt_utils.h                                     :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yforeau <yforeau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/11 04:54:44 by yforeau           #+#    #+#             */
-/*   Updated: 2019/01/11 06:48:35 by yforeau          ###   ########.fr       */
+/*   Created: 2019/01/17 10:52:33 by yforeau           #+#    #+#             */
+/*   Updated: 2019/01/17 10:53:07 by yforeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GETOPT_UTILS_H
-# define GETOPT_UTILS_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
-# include "stddef.h"
+# include <stddef.h>
 
 typedef	unsigned char	t_uchar;
 
