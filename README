@@ -9,3 +9,9 @@ also handles the '-' and '+' flags in optstring like the GNU version.
 One of the differences with the standard getopt implementation is that it is
 reentrant and thread-safe by default, the only drawback being that it needs an
 init function.
+
+DEVELOPEMENT INFOS: This project is a light-weight version of ft_getopt without
+the full libft. The libft funcitons needed for ft_getopt are located in the
+"getopt_utils.c" file with "getopt_utils.h" as its header. There is an other
+version of ft_getopt in libft, that probably will be more up to date than this
+one. This one should be updated with the libft version each time it is used.
